@@ -2,7 +2,17 @@ import random
 import math
 
 def main():  
-    hexagram = [
+
+    #至诚无息之时
+    h = seek_a_hexagram()
+    print('')
+    
+    print("卦：", h[0] , "，动爻：", h[1],'爻')
+    
+    input('Press <Enter> to exit')
+    
+def seek_a_hexagram():
+    hexagrams = [
         '乾',
         '夬',
         '大有',
@@ -68,16 +78,20 @@ def main():
         '剥',
         '坤'
         ]
-    g = random.randint(1,384)
+
+    #人以至诚皆能通神
+    n = random.randint(1,384)
     
-    if g % 6 == 0:
-        y = 6
-    else:
-        y = g % 6 
+    y = [
+        '上',
+        '初',
+        '二',
+        '三',
+        '四',
+        '五'    
+    ]
     
-    
-    
-    print("64卦：",hexagram[math.ceil(g/6) - 1],"，动爻：",y)
+    return (hexagrams[math.ceil(n/6) - 1],y[n % 6])
     
 if __name__ == "__main__":
     main()
