@@ -5,7 +5,7 @@ def main():
 
     #至诚无息之时
     h = seek_a_hexagram()
-    
+        
     print("\n" , "卦：", h[0] , "，动爻：", h[1],'爻', "\n" )
     
     input('Press <Enter> to exit')
@@ -80,6 +80,13 @@ def seek_a_hexagram():
 
     #人以至诚皆能通神
     n = random.randint(1,384)
+
+    #if n % 6 == 0:
+    #    y = '上'
+    #elif n % 6 == 1:
+    #    y = '初'
+    #else:
+    #   y = n % 6
     
     y = [
         '上',
