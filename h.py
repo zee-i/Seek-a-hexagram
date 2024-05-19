@@ -5,9 +5,8 @@ def main():
 
     #至诚无息之时
     h = seek_a_hexagram()
-    print('')
     
-    print("卦：", h[0] , "，动爻：", h[1],'爻')
+    print("\n" , "卦：", h[0] , "，动爻：", h[1],'爻', "\n" )
     
     input('Press <Enter> to exit')
     
